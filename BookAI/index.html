@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookAI</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sevillana&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #031229;
+        color: white;
+        font-family: 'Inter', sans-serif;
+        letter-spacing: 0.5px;
+    }
+
+    /* navbar */
+
+    nav {
+        background-color: #1e293b;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+
+    nav ul li {
+        list-style: none;
+        /* padding: 1rem; */
+        margin: 0.5rem 1rem;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.81);
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: 0.4s ease-in;
+
+    }
+
+    nav ul li a:hover {
+        color: rgb(59, 190, 226);
+    }
+
+    /* main */
+
+    main {
+        max-width: 1000px;
+        margin: 1.8rem auto;
+        padding: 0rem 4rem;
+    }
+
+
+    section {
+        background-color: #1e293b;
+        border: 1px solid #494545;
+        border-radius: 10px;
+        padding: 2.9rem;
+        margin-top: 6rem;
+    }
+    
+
+    .pricingBox h2 {
+        color: #8d9ef6;
+        margin-top: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    /* p{
+        font-size:1.1rem;
+    } */
+
+    /* table */
+
+    table {
+        width: 100%;
+        margin-top: 1rem;
+        border-spacing: 0;
+        border: 1px solid #494545;
+        border-radius: 10px;
+        overflow: hidden;
+
+    }
+
+    table th {
+        background-color: #6078f1;
+        font-weight: 600px;
+        font-size: 0.8rem;
+    }
+
+    th,
+    td {
+        padding: 1.2rem;
+        text-align: left;
+        border-bottom: 1px solid #494545;
+    }
+
+    h3 {
+        color: #98a7f5;
+        margin-top: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+
+    /* media queries */
+
+    @media (max-width:850px) {
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.8rem;
+
+        }
+    }
+
+    @media (max-width:650px) {
+        main {
+            font-size: 0.85rem;
+
+        }
+    }
+
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <ul>
+                    <li><a href="/">OVERVIEW</a></li>
+                    <li><a href="/">AUTHENTICATION</a></li>
+                    <li><a href="/">ENDPOINTS</a></li>
+                    <li><a href="/">TUTORIAL</a></li>
+                    <li><a href="/">CODE EXAMPLES</a></li>
+                    <li><a href="/">PRICING</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="pricingBox">
+            <h2>
+                API Pricing
+            </h2>
+            <p>
+                Our API pricing is based on the model used and the number of tokens processed. Here's a breakdown of the
+                costs:
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>API</th>
+                        <th>MODEL</th>
+                        <th>PRICE PER 1K TOKENS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>OpenAI</td>
+                        <td>GPT-3.5</td>
+                        <td>$0.002</td>
+                    </tr>
+                    <tr>
+                        <td>OpenAI</td>
+                        <td>GPT-4</td>
+                        <td>$0.03</td>
+                    </tr>
+                    <tr>
+                        <td>Together AI</td>
+                        <td>Llama-2-70b</td>
+                        <td>$0.0008</td>
+                    </tr>
+                    <tr>
+                        <td>Together AI</td>
+                        <td>Llama-2-13b</td>
+                        <td>$0.0006</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>
+                Token Estimation
+            </h3>
+            <p>
+                On average, 1 token is approximately 4 characters or 0.75 words. For precise pricing, we recommend using
+                our token calculator tool.
+            </p>
+
+            <h3>
+                Billing
+            </h3>
+            <p>
+                You will only be charged for the tokens used in generating the book. The API tracks token usage and
+                bills accordingly. Detailed usage reports are available in your account dashboard.
+            </p>
+
+        </section>
+    </main>
+
+</body>
+
+</html>
